@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/navigation_category_conditions">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_conditions" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_conditions" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_accelerated" android:title="@string/title_accelerated"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_asleep" android:title="@string/title_asleep"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_blinded" android:title="@string/title_blinded"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_broken" android:title="@string/title_broken"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_concealed" android:title="@string/title_concealed"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_confused" android:title="@string/title_confused"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_dazzled" android:title="@string/title_dazzled"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_dead" android:title="@string/title_dead"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_deafened" android:title="@string/title_deafened"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_drained" android:title="@string/title_drained"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_dying" android:title="@string/title_dying"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_encumbered" android:title="@string/title_encumbered"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_enervated" android:title="@string/title_enervated"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_enfeebled" android:title="@string/title_enfeebled"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_entangled" android:title="@string/title_entangled"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_fascinated" android:title="@string/title_fascinated"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_fatigued" android:title="@string/title_fatigued"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_flatfooted" android:title="@string/title_flatfooted"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_fleeing" android:title="@string/title_fleeing"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_frightened" android:title="@string/title_frightened"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_grabbed" android:title="@string/title_grabbed"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_hampered" android:title="@string/title_hampered"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_immobile" android:title="@string/title_immobile"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_paralyzed" android:title="@string/title_paralyzed"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_persistent_damage" android:title="@string/title_persistent_damage"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_petrified" android:title="@string/title_petrified"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_prone" android:title="@string/title_prone"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_quick" android:title="@string/title_quick"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_restrained" android:title="@string/title_restrained"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_sensed" android:title="@string/title_sensed"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_sick" android:title="@string/title_sick"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_slowed" android:title="@string/title_slowed"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_stunned" android:title="@string/title_stunned"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_stupefied" android:title="@string/title_stupefied"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_unconscious" android:title="@string/title_unconscious"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_wounded" android:title="@string/title_wounded"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_basic_actions">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_basic_actions" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_basic_actions" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_aid" android:title="@string/title_aid"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_assist" android:title="@string/title_assist"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_crawl" android:title="@string/title_crawl"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_delay" android:title="@string/title_delay"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_drop" android:title="@string/title_drop"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_drop_prone" android:title="@string/title_drop_prone"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_interact" android:title="@string/title_interact"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_leap" android:title="@string/title_leap"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_ready" android:title="@string/title_ready"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_seek" android:title="@string/title_seek"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_stand" android:title="@string/title_stand"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_step" android:title="@string/title_step"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_stride" android:title="@string/title_stride"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_strike" android:title="@string/title_strike"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_take_cover" android:title="@string/title_take_cover"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_special_actions">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_special_actions" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_special_actions" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_arrest_a_fall" android:title="@string/title_arrest_a_fall"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_breahte_deep" android:title="@string/title_breahte_deep"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_burrow" android:title="@string/title_burrow"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_fly" android:title="@string/title_fly"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_mount" android:title="@string/title_mount"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_point_out" android:title="@string/title_point_out"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_raise_a_shield" android:title="@string/title_raise_a_shield"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_shield_block" android:title="@string/title_shield_block"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_condition_rules">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_condition_rules" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_condition_rules" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_condition_values" android:title="@string/title_condition_values"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_redundant_conditions" android:title="@string/title_redundant_conditions"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_overriding_conditions" android:title="@string/title_overriding_conditions"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_counteracting_conditions" android:title="@string/title_counteracting_conditions"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_bolstered" android:title="@string/title_bolstered"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_altering_actions" android:title="@string/title_altering_actions"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_speed_reduction" android:title="@string/title_speed_reduction"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_affliction_rules">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_affliction_rules" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_affliction_rules" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_saving_throw" android:title="@string/title_saving_throw"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_onset" android:title="@string/title_onset"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_maximum_duration" android:title="@string/title_maximum_duration"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_stages" android:title="@string/title_stages"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_conditions_from_afflictions" android:title="@string/title_conditions_from_afflictions"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_multiple_exposures" android:title="@string/title_multiple_exposures"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_virulent_afflictions" android:title="@string/title_virulent_afflictions"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

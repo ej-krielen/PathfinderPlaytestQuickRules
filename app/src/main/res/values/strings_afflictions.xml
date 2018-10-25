@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Afflictions  -->
+    <string name="title_saving_throw">Saving Throw</string>
+    <string name="text_saving_throw">
+When you’re first exposed to the affliction, you must attempt a saving throw against it. This first attempt to stave off the affliction is called the initial save. On a successful or a critically successful saving throw, you are unaffected by that exposure to the affliction. You do not need to attempt further saving throws against it unless you are exposed to the affliction again. If you fail the initial saving throw, after its onset period (if applicable), you go to stage 1 of the affliction and are subjected to the listed effect. On a critical failure, after its onset period (if applicable) you go to stage 2 of the affliction and take that effect instead. See Stages below.
+</string>
+    <string name="title_onset">Onset</string>
+    <string name="text_onset">
+Some afflictions have onset times. For these afflictions, once you fail your initial save, you don’t gain the effects for the first stage of the affliction until the onset time elapses. If this entry is absent, you gain the effects for the first stage immediately upon reaching that stage.
+</string>
+    <string name="title_maximum_duration">Maximum Duration</string>
+    <string name="text_maximum_duration">
+If an affliction lasts only a limited amount of time, it lists a maximum duration. Otherwise, the affliction lasts until you succeed at enough saves to recover.
+</string>
+    <string name="title_stages">Stages</string>
+    <string name="text_stages">
+An affliction typically has multiple stages, each of which lists an effect followed by an interval in parentheses. When you reach a given stage of an affliction, you are subjected to the effects listed for that stage. At the end of a stage’s interval, you must attempt a new saving throw. On a success, you reduce the stage by 1 and take the effects of that stage again. On a critical success, you reduce the stage by 2. If the affliction’s stage is ever reduced to lower than stage 1, the affliction ends and you don’t need to attempt further saves unless you’re exposed to the affliction again. On a failure, the stage increases by 1, and on a critical failure its stage increases by 2. If a failure or critical failure would increase the stage beyond the highest listed stage, the affliction instead repeats the effects of the highest stage.
+</string>
+    <string name="title_conditions_from_afflictions">Conditions from Afflictions</string>
+    <string name="text_conditions_from_afflictions">
+An affliction might give you conditions with a longer or shorter duration than the affliction. For instance, if an affliction causes you to be drained but has a maximum duration of 5 minutes, you remain drained even after the affliction ends, as is normal for the drained condition. Alternatively, you might succeed at the flat check to remove persistent damage you took from an ongoing affliction, but you would still need to attempt saves to remove the affliction itself, and failing one might give you new persistent damage.
+</string>
+    <string name="title_multiple_exposures">Multiple Exposures</string>
+    <string name="text_multiple_exposures">
+Multiple exposures to the same affliction have no effect if it’s a curse or disease. However, for a poison, failing the initial saving throw against a new dose increases the stage by 1 (or by 2 if you critically fail) without affecting the maximum duration. This is true even if you’re within the poison’s onset period, though it doesn’t change the length of the onset period.
+</string>
+    <string name="title_virulent_afflictions">Virulent Afflictions</string>
+    <string name="text_virulent_afflictions">
+Afflictions with the virulent trait are harder to remove. You must succeed at two consecutive saves to reduce a virulent affliction’s stage by 1. A critical success reduces a virulent affliction’s stage by only 1 instead of by 2.
+</string>
+</resources>

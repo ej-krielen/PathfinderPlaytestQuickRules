@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Rules  -->
+    <string name="title_condition_values">Condition Values</string>
+    <string name="text_condition_values">
+Some conditions have a numerical value, called a condition value, indicated by a numeral following the condition. This value might enumerate a bonus or penalty the condition gives you. These values can often be reduced by spells, skills, or simply waiting. If such a value is ever reduced to 0, the condition ends. If you’re affected by a condition with a value multiple	times, you apply only the higher value, although you might have to track both durations if one has a lower value but lasts longer.
+</string>
+    <string name="title_redundant_conditions">Redundant Conditions</string>
+    <string name="text_redundant_conditions">
+You can have a given condition only once at a time (conditions with different values are considered different conditions for this purpose; see Condition Values). If an effect would impose a condition you’re already being affected by, you now have that condition for the longer of the two durations. The shorter-duration condition effectively ends, though other conditions caused by the original, shorter-duration effect might continue. For example, let’s say you have been hit by a monster that drains your vitality; that wound causes you to be enfeebled 2 and flat-footed until the end of the monster’s next turn. Before the end of that creature’s next turn, a trap poisons you, making you enfeebled 2 for 1 minute. In this case, the enfeebled 2 that lasts for 1 minute replaces the enfeebled 2 from the monster. You would continue to be enfeebled 2 for this longer duration, but you would still remain flat-footed only until the end of the monster’s next turn. Any ability that removes a condition removes it entirely, no matter what its condition value is or how many times you’ve been affected by it. In the example above, a spell that removes the enfeebled condition from you would remove it entirely—the spell wouldn’t need to remove it twice.
+</string>
+    <string name="title_overriding_conditions">Overriding Conditions</string>
+    <string name="text_overriding_conditions">
+Some conditions override others, as described in the condition. All effects of the overridden condition are suppressed until the overriding condition ends. The overridden condition’s duration continues to elapse, and it might expire while suppressed.
+</string>
+    <string name="title_counteracting_conditions">Counteracting Conditions</string>
+    <string name="text_counteracting_conditions">
+Some effects counteract conditions, afflictions (see page 324), and other effects. When attempting to counteract an effect, compare the counteract level of the effect with the counteract level of the ability you are using. A spell’s counteract level is equal to its spell level; see Table 9–3 (page 320) for the counteract levels of other abilities. If your ability has a higher counteract level than that of the effect to be counteracted, you automaticallysucceed. If your ability’s counteract level is the same as the effect’s counteract level or lower, you must succeed at a check using the relevant skill or ability against the DC of the target effect. You take a cumulative –5 penalty to this check for every level by which your ability’s counteract level is lower than the target’s. If your ability is 4 or more counteract levels lower than that of the effect you are trying to counteract, your attempt automatically fails. On a successful counteract check, the condition or effect immediately ends.
+</string>
+    <string name="title_bolstered">Bolstered</string>
+    <string name="text_bolstered">
+Some spells and abilities can’t affect a creature more than once in a day. If an effect says a creature becomes bolstered, repeated applications of that effect don’t do anything to the creature. For example, the blindness spell says, “The target is bolstered against all castings of blindness.” Casting blindness on that creature again would have no effect. Unless otherwise stated, a creature remains bolstered for 24 hours against only that specific ability used by that specific creature. Blindness has an exception, bolstering the target against the spell no matter who casts it. Being bolstered doesn’t prevent ongoing effects of the source of the condition. For instance, if an ability makes you frightened and bolsters you against it, you don’t cease to be frightened due to becoming bolstered—you just don’t become frightened again if the same creature targets you with that ability later that day.
+</string>
+    <string name="title_altering_actions">Altering Actions</string>
+    <string name="text_altering_actions">
+Conditions can change the number of actions you can spend on your turn, or whether you can use actions, reactions, or free actions at all. The slow condition, for example, causes you to lose actions, while quick causes you to gain actions. The most restrictive form of this is when a condition states that you can’t act: this means you can’t spend actions, activities, reactions, or free actions. When you can’t act, you don’t regain your actions and reaction on your turn.
+</string>
+    <string name="title_speed_reduction">Speed Reduction</string>
+    <string name="text_speed_reduction">
+Some conditions reduce your Speed in one or more movement types. These can’t reduce your Speed below 5 feet unless stated otherwise. Speed reductions to the same movement type from different sources (such as from armor and the hampered condition) are cumulative.
+</string>
+</resources>

@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nl.rekijan.pathfinderplaytestquickrules.ui.fragments.StartFragment">
+
+    <TextView
+        android:id="@+id/start_fragment_textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/small_padding"/>
+        <!--android:answer="@string/start_fragment_text" -->
+</RelativeLayout>
