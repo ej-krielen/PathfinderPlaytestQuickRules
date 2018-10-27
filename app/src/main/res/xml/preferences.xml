@@ -98,4 +98,12 @@
             <CheckBoxPreference android:defaultValue="true" android:key="pref_virulent_afflictions" android:title="@string/title_virulent_afflictions"/>
         </PreferenceScreen>
     </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_encounter_mode">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_encounter_mode" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_encounter_mode" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_initiative" android:title="@string/title_initiative"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_start_your_turn" android:title="@string/title_start_your_turn"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_end_your_turn" android:title="@string/title_end_your_turn"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
 </PreferenceScreen>

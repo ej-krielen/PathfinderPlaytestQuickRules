@@ -83,6 +83,8 @@ public class SearchableNavigationView extends LinearLayout implements SharedPref
 
         setNavItems(mApp.getHeaders(), mApp.getNavItems());
         expandAll();
+        clearFocus();
+
     }
 
     private void expandAll() {

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Encounter Mode  -->
+    <string name="title_initiative">Initiative</string>
+    <string name="text_initiative">
+At the start of an encounter you roll initiative to determine your place in the initiative order, which is the sequence in which the characters will take their turns. Typically, you’ll roll a Perception check to determine your initiative. Sometimes the GM might call on you to make some other type of check for the initiative check. For instance, if you were Sneaking during exploration (see page 317), you’d roll a Stealth check instead. Alternatively, a social encounter could call for a Deception or Diplomacy check. If your initiative roll result is tied with an opponent’s result, that opponent goes first. If your initiative roll result is tied with another player character’s result, you can decide between yourselves who goes first when you reach that place in the initiative order. Once you’ve resolved who goes first, your places in the initiative order usually don’t change during the encounter.
+</string>
+    <string name="title_start_your_turn">Start Your Turn</string>
+    <string name="text_start_your_turn">
+If you created an effect that lasts for a certain number of rounds, you reduce the number of rounds remaining. The effect ends if the duration has expired.\n
+You can use free actions or reactions that have a trigger of “Your turn begins” or something similar.\n
+If you’re dying, attempt your recovery saving throw (see page 295).\n
+The last step of starting your turn is always the same.\n
+Regain your 3 actions and 1 reaction. If you have not spent your actions or your reaction from your last turn, you lose them. You can’t hold over actions or reactions from one turn to another turn. Some abilities or conditions (such as the quick and slowed conditions) can change how many actions you regain and whether you regain your reaction. If a condition prevents you from being able to act, you don’t regain any actions or your reaction.
+</string>
+    <string name="title_end_your_turn">End Your Turn</string>
+    <string name="text_end_your_turn">
+End any effects that last until the end of your turn. For example, spells with a duration of concentration end at the end of your turn unless you use the Concentrate on a Spell action during your turn to extend them. Some effects caused by enemies might also last through a certain number of your turns, and you decrease the remaining duration or end them during this step.\n
+If you have a persistent damage condition, you take the damage at this point. You also attempt any saves for your afflictions at this time. Many other conditions change at the end of your turn, such as the frightened condition decreasing in severity.\n
+You can use free actions or reactions that have a trigger of “Your turn ends” or something similar.
+</string>
+</resources>

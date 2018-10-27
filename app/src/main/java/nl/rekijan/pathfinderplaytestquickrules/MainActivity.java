@@ -54,12 +54,13 @@ public class MainActivity extends AppCompatActivity
                 this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         if (mDrawerLayout != null) {
             mDrawerLayout.addDrawerListener(toggle);
-        }
-        toggle.syncState();
+            toggle.syncState();
 
-        mDrawerLayout.openDrawer(mDrawerGroupedLayout);
-        mDrawerLayout.addDrawerListener(new DrawerListener());
-        mNavItemListView = (ExpandableListView) findViewById(R.id.navigation_expandableListView);
+            mDrawerLayout.openDrawer(mDrawerGroupedLayout);
+            mDrawerLayout.addDrawerListener(new DrawerListener());
+        }
+            mNavItemListView = (ExpandableListView) findViewById(R.id.navigation_expandableListView);
+
 
         if (findViewById(R.id.fragment_container) != null) {
             //if we're being restored from a previous state,
@@ -130,8 +131,10 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onNavItemPressed(RulesModel rulesModel) {
         replaceFragment(RulesFragment.newInstance(rulesModel));
-        if (mDrawerLayout.isDrawerOpen(mDrawerGroupedLayout)) {
-            mDrawerLayout.closeDrawer(mDrawerGroupedLayout);
+        if (mDrawerLayout != null) {
+            if (mDrawerLayout.isDrawerOpen(mDrawerGroupedLayout)) {
+                mDrawerLayout.closeDrawer(mDrawerGroupedLayout);
+            }
         }
     }
 
@@ -156,7 +159,9 @@ public class MainActivity extends AppCompatActivity
      */
     @Override
     public void onOpenDrawerClicked() {
-        mDrawerLayout.openDrawer(mDrawerGroupedLayout);
+        if (mDrawerLayout != null) {
+            mDrawerLayout.openDrawer(mDrawerGroupedLayout);
+        }
     }
 
     @Override

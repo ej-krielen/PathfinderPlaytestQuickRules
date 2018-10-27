@@ -13,6 +13,7 @@ import nl.rekijan.pathfinderplaytestquickrules.contentloaders.AfflictionRulesCon
 import nl.rekijan.pathfinderplaytestquickrules.contentloaders.BasicActionsContentLoader;
 import nl.rekijan.pathfinderplaytestquickrules.contentloaders.ConditionRulesContentLoader;
 import nl.rekijan.pathfinderplaytestquickrules.contentloaders.ConditionsContentLoader;
+import nl.rekijan.pathfinderplaytestquickrules.contentloaders.EncounterModeContentLoader;
 import nl.rekijan.pathfinderplaytestquickrules.contentloaders.SpecialActionsContentLoader;
 import nl.rekijan.pathfinderplaytestquickrules.models.NavItemModel;
 
@@ -87,6 +88,13 @@ public class AppExtension extends Application {
             mListDataHeader.add(getString(R.string.navigation_category_affliction_rules));
             mListDataChild.put(getString(R.string.navigation_category_affliction_rules), AfflictionRulesContentLoader.getInstance().getAfflictionRulesContent(this, sharedPref));
         }
+
+        //Encounter Mode
+        if (sharedPref.getBoolean("pref_show_encounter_mode", true)) {
+            mListDataHeader.add(getString(R.string.navigation_category_encounter_mode));
+            mListDataChild.put(getString(R.string.navigation_category_encounter_mode), EncounterModeContentLoader.getInstance().getEncounterModeContent(this, sharedPref));
+        }
+
     }
 
     public List<String> getHeaders() {

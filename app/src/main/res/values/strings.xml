@@ -22,7 +22,7 @@ Oops, looks like you discovered a bug. \n\nE-mail me at info\@rekijan.nl and men
     <!--  Navigation Drawer -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="start_fragment_text">Open the navigation drawer to select a topic</string>
+    <string name="start_fragment_text">Select a topic to display</string>
 
 
     <!--  Settings -->
@@ -54,5 +54,6 @@ Oops, looks like you discovered a bug. \n\nE-mail me at info\@rekijan.nl and men
     <string name="navigation_category_condition_rules">Condition Rules</string>
     <string name="navigation_category_special_actions">Speciality Basic Actions and Reactions</string>
     <string name="navigation_category_affliction_rules">Affliction Rules</string>
+    <string name="navigation_category_encounter_mode">Encounter Mode</string>
 
 </resources>
