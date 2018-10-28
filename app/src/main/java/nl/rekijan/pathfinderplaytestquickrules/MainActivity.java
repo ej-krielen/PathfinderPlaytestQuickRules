@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity
     private DrawerLayout mDrawerLayout;
     private RelativeLayout mDrawerGroupedLayout;
     private ExpandableListView mNavItemListView;
+    private String mRulesTitle;
+    private String mRulesText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +77,8 @@ public class MainActivity extends AppCompatActivity
                     .addToBackStack(START_FRAGMENT_TAG)
                     .commit();
         }
+        mRulesTitle = "no title found";
+        mRulesText = "no text found";
     }
 
     @Override
@@ -111,6 +115,8 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, SettingsActivity.class));
             return true;
+        } else if (id == R.id.action_share) {
+            shareContent();
         }
 
         return super.onOptionsItemSelected(item);
@@ -123,6 +129,14 @@ public class MainActivity extends AppCompatActivity
         transaction.commit();
     }
 
+    private void shareContent() {
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, mRulesTitle + "\n" + mRulesText);
+        sendIntent.setType("text/plain");
+        startActivity(sendIntent);
+    }
+
     /**
      * Callback when a {@link nl.rekijan.pathfinderplaytestquickrules.models.NavItemModel NavItemModel} has been clicked on
      *
@@ -132,6 +146,8 @@ public class MainActivity extends AppCompatActivity
     public void onNavItemPressed(RulesModel rulesModel) {
         replaceFragment(RulesFragment.newInstance(rulesModel));
         if (mDrawerLayout != null) {
+            mRulesTitle = rulesModel.getTitle();
+            mRulesText = rulesModel.getText();
             if (mDrawerLayout.isDrawerOpen(mDrawerGroupedLayout)) {
                 mDrawerLayout.closeDrawer(mDrawerGroupedLayout);
             }
