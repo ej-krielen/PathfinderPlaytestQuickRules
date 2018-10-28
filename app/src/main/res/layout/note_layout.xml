@@ -9,7 +9,8 @@
     android:paddingBottom="@dimen/small_padding"
     android:paddingLeft="@dimen/small_padding"
     android:paddingRight="@dimen/small_padding"
-    android:paddingTop="@dimen/small_padding">
+    android:paddingTop="@dimen/small_padding"
+    android:layout_marginBottom="@dimen/small_padding">
 
     <ImageView
         android:id="@+id/note_imageView"
