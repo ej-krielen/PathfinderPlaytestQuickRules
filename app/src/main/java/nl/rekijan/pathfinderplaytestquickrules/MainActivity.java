@@ -23,6 +23,7 @@ import nl.rekijan.pathfinderplaytestquickrules.ui.fragments.RulesFragment;
 import nl.rekijan.pathfinderplaytestquickrules.ui.fragments.StartFragment;
 import nl.rekijan.pathfinderplaytestquickrules.ui.views.NoteLinearLayout;
 import nl.rekijan.pathfinderplaytestquickrules.ui.views.SearchableNavigationView;
+import nl.rekijan.pathfinderplaytestquickrules.ui.views.TraitLinearLayout;
 import nl.rekijan.pathfinderplaytestquickrules.utilities.CommonUtil;
 
 import static nl.rekijan.pathfinderplaytestquickrules.AppConstants.DIALOG_TAG;
@@ -30,6 +31,7 @@ import static nl.rekijan.pathfinderplaytestquickrules.AppConstants.START_FRAGMEN
 
 public class MainActivity extends AppCompatActivity
         implements NoteLinearLayout.OnNotePressedListener,
+        TraitLinearLayout.OnTraitPressedListener,
         StartFragment.OnOpenDrawerClicked,
         SearchableNavigationView.OnNavItemPressedListener {
 
@@ -161,6 +163,22 @@ public class MainActivity extends AppCompatActivity
      */
     @Override
     public void onNotePressed(CustomDialogFragment dialogFragment) {
+        //Hide previous dialog if there is one
+        if (mDialogFragment != null && mDialogFragment.getDialog() != null && mDialogFragment.getDialog().isShowing())
+            mDialogFragment.dismiss();
+        //Show new dialog
+        mDialogFragment = dialogFragment != null ? dialogFragment : null;
+        if (mDialogFragment != null)
+            mDialogFragment.show(getSupportFragmentManager(), DIALOG_TAG);
+    }
+
+    /**
+     * Callback when a trait has been pressed and a dialog needs to be opened
+     *
+     * @param dialogFragment dialog associated with the trait that has to be opened
+     */
+    @Override
+    public void onTraitPressed(CustomDialogFragment dialogFragment) {
         //Hide previous dialog if there is one
         if (mDialogFragment != null && mDialogFragment.getDialog() != null && mDialogFragment.getDialog().isShowing())
             mDialogFragment.dismiss();

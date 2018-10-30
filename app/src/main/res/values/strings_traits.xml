@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--Traits-->
+    <string name="title_attack">Attack</string>
+    <string name="text_attack">This ability grants an attack. For each attack you make beyond the first on your turn, you take a multiple attack penalty.\n
+        Attacks are particularly strenuous and become less and less effective the more you use them during a single turn. The second time you use an attack action (anything with the attack trait) during your turn, you take a –5 penalty to your attack roll. On your third attack (and any subsequent attacks if you have a way to take more) you take a –10 penalty. This penalty is called your multiple attack penalty. The multiple attack penalty applies only on your turn and resets at the end of your turn. Attacks you can make outside of your turn might include their own penalties.
+    </string>
+
+    <string name="title_auditory">Auditory</string>
+    <string name="text_auditory">Auditory actions and effects rely on sound. An action with the auditory trait can be successfully performed only if the creature using the action can speak or otherwise produce the required sounds. A spell or effect with the auditory trait has its effect only if the target can hear it. This is different from a sonic effect, which still affects targets who can’t hear it (such as deaf targets) as long as the effect makes sound.
+    </string>
+
+    <string name="title_concentrate">Concentrate</string>
+    <string name="text_concentrate">It takes a degree of mental concentration and discipline to use this type of action.</string>
+
+    <string name="title_manipulate">Manipulate</string>
+    <string name="text_manipulate">You must physically manipulate an item or make gestures to use this type of action. Creatures without a suitable appendage cannot perform actions with this trait. Manipulate actions often trigger reactions.</string>
+
+    <string name="title_move">Move</string>
+    <string name="text_move">This action involves moving from one space to another in some way. Attacks of Opportunity and other reactions are triggered when a creature within a certain distance of the reactor moves from one space to another.\n
+        Actions or abilities with the move trait can trigger reactions or free actions throughout the course of the distance traveled (although no more than once for a given creature). Each time you exit a square that is within a creature’s reach, your movement triggers those reactions and free actions. If you use a move action or move ability but don’t move into another square, the trigger happens at the end of that action or ability instead. Some exceptions, such as Step, don’t trigger reactions or free actions based on movement.
+    </string>
+
+    <string name="title_secret">Secret</string>
+    <string name="text_secret">This trait indicates that the GM rolls the check for this ability in secret.</string>
+
+    <string name="title_visual">Visual</string>
+    <string name="text_visual">A visual spell can affect only creatures that can see it.</string>
+
+
+</resources>

@@ -1,9 +1,13 @@
 package nl.rekijan.pathfinderplaytestquickrules.models;
 
+import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import nl.rekijan.pathfinderplaytestquickrules.utilities.NavigationHandler;
 
 /**
  * Custom class to set fields for Rules
@@ -15,12 +19,17 @@ public class RulesModel implements Parcelable {
 
     private String title;
     private String text;
+    private String requirement;
+    private String trigger;
     private List<NoteModel> notes;
+    private List<TraitModel> traits;
     private String errorMessage;
 
     public RulesModel (String title, String text){
         this.title = title;
         this.text = text;
+        notes = new ArrayList<>();
+        traits = new ArrayList<>();
     }
 
     private RulesModel(Parcel in) {
@@ -69,6 +78,11 @@ public class RulesModel implements Parcelable {
         this.text = text;
     }
 
+    public void addNote(String title, String text, Context context)
+    {
+        notes.add(new NoteModel(title, NavigationHandler.getInstance(context).createDialogFragment(title, text)));
+    }
+
     public List<NoteModel> getNotes() {
         return notes;
     }
@@ -76,6 +90,15 @@ public class RulesModel implements Parcelable {
     public void setNotes(List<NoteModel> notes) {
         this.notes = notes;
     }
+
+    public void addTrait(String title, String text, Context context)
+    {
+        traits.add(new TraitModel(title, NavigationHandler.getInstance(context).createDialogFragment(title, text)));
+    }
+
+    public List<TraitModel> getTraits() { return traits;}
+
+    public void setTraits(List<TraitModel> traits) { this.traits = traits; }
 
     public String getErrorMessage() {
         return errorMessage;
@@ -85,4 +108,19 @@ public class RulesModel implements Parcelable {
         this.errorMessage = errorMessage;
     }
 
+    public String getRequirement() {
+        return requirement;
+    }
+
+    public void setRequirement(String requirement) {
+        this.requirement = requirement;
+    }
+
+    public String getTrigger() {
+        return trigger;
+    }
+
+    public void setTrigger(String trigger) {
+        this.trigger = trigger;
+    }
 }

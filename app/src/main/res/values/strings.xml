@@ -34,8 +34,10 @@ Oops, looks like you discovered a bug. \n\nE-mail me at info\@rekijan.nl and men
     <string name="pref_category_summary_disabled">Disabled (sub-items also disabled)</string>
     <string name="pref_category_title">Category</string>
 
-    <!--  Surveys -->
+    <!--  Titles -->
     <string name="notes_title">Notes</string>
+    <string name="requirement_title">Requirement:</string>
+    <string name="trigger_title">Trigger:</string>
 
     <!--  General answers -->
     <string name="answer_yes">Yes</string>

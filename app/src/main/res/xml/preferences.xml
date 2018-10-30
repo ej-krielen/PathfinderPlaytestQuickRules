@@ -65,7 +65,7 @@
         <SwitchPreference android:defaultValue="true" android:key="pref_show_special_actions" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
         <PreferenceScreen android:key="button_show_special_actions" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
             <CheckBoxPreference android:defaultValue="true" android:key="pref_arrest_a_fall" android:title="@string/title_arrest_a_fall"/>
-            <CheckBoxPreference android:defaultValue="true" android:key="pref_breahte_deep" android:title="@string/title_breahte_deep"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_breathe_deep" android:title="@string/title_breathe_deep"/>
             <CheckBoxPreference android:defaultValue="true" android:key="pref_burrow" android:title="@string/title_burrow"/>
             <CheckBoxPreference android:defaultValue="true" android:key="pref_fly" android:title="@string/title_fly"/>
             <CheckBoxPreference android:defaultValue="true" android:key="pref_mount" android:title="@string/title_mount"/>

@@ -2,35 +2,47 @@
 <resources>
     <!--  Special Actions  -->
     <string name="title_arrest_a_fall">Arrest a fall - reaction</string>
+    <string name="trigger_arrest_a_fall">You fall.</string>
+    <string name="requirement_arrest_a_fall">You have a fly Speed.</string>
     <string name="text_arrest_a_fall">
-Trigger You fall.\n Requirements You have a fly Speed.\n You attempt an Acrobatics check to slow your fall (see Falling on page 310). The DC is typically 15, but it might be higher due to air turbulence or other circumstances.\n Success You fall gently, taking no damage from the fall.
+You attempt an Acrobatics check to slow your fall (see Falling on page 310). The DC is typically 15, but it might be higher due to air turbulence or other circumstances.\n Success You fall gently, taking no damage from the fall.
 </string>
-    <string name="title_breahte_deep">Breathe deep - 1 action</string>
-    <string name="text_breahte_deep">
-Trait concentrate\n You take a deep breath. If you go without air at any point before the start of your next turn, you can use twice as many actions before you start suffocating (see page 315).
+
+    <string name="title_breathe_deep">Breathe deep - 1 action</string>
+    <string name="text_breathe_deep">You take a deep breath. If you go without air at any point before the start of your next turn, you can use twice as many actions before you start suffocating (see page 315).
 </string>
+
     <string name="title_burrow">Burrow - 1 action</string>
-    <string name="text_burrow">
-Trait move\n Requirements You have a burrow Speed.\n You dig your way through dirt, sand, or a similar loose material at a rate up to your burrow Speed. You can’t burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so.
+    <string name="requirement_burrow">You have a burrow Speed.</string>
+    <string name="text_burrow">You dig your way through dirt, sand, or a similar loose material at a rate up to your burrow Speed. You can’t burrow through rock or other substances denser than dirt unless you have an ability that allows you to do so.
 </string>
+
     <string name="title_fly">Fly - 1 action</string>
+    <string name="requirement_fly">You have a fly Speed.</string>
     <string name="text_fly">
-Trait move.\n Requirements You have a fly Speed..\n You move through the air up to your fly Speed. Moving upward (straight up or diagonally) counts as traveling through difficult terrain. You can move straight down 10 feet for every 5 feet of movement you spend. If you fly to the ground, you don’t take falling damage. You can use an action to Fly 0 feet to hover in place. If you’re airborne at the end of your turn and didn’t use a Fly action this round, you fall.
+You move through the air up to your fly Speed. Moving upward (straight up or diagonally) counts as traveling through difficult terrain. You can move straight down 10 feet for every 5 feet of movement you spend. If you fly to the ground, you don’t take falling damage. You can use an action to Fly 0 feet to hover in place. If you’re airborne at the end of your turn and didn’t use a Fly action this round, you fall.
 </string>
+
     <string name="title_mount">Mount - 1 action</string>
-    <string name="text_mount">
-Trait move\n Requirements You are adjacent to an allied animal companion or to a creature at least one size larger than you that you’ve controlled using the Handle an Animal action (see page 153).\n You move onto the controlled creature and ride it. If you’re already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it.
+    <string name="requirement_mount">You are adjacent to an allied animal companion or to a creature at least one size larger than you that you’ve controlled using the Handle an Animal action</string>
+    <string name="text_mount">ou move onto the controlled creature and ride it. If you’re already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it.
 </string>
+
     <string name="title_point_out">Point Out - 1 action</string>
+    <string name="requirement_point_out">A creature is not unseen by you, but it is unseen by one or more of your allies.</string>
     <string name="text_point_out">
-Trait manipulate, visual\n Requirements A creature is not unseen by you, but it is unseen by one or more of your allies.\n You indicate a creature that you can see to one or more allies, gesturing in a direction and describing the distance verbally. Allies treat that creature as sensed rather than unseen (see page 303).This works only for allies who can see you and are in a position where they could potentially sense the target. If your allies can’t hear or understand you, they must succeed at a Perception check against the creature’s Stealth DC or they misunderstand the distance to the target and believe it to be in a different location.
+You indicate a creature that you can see to one or more allies, gesturing in a direction and describing the distance verbally. Allies treat that creature as sensed rather than unseen (see page 303).This works only for allies who can see you and are in a position where they could potentially sense the target. If your allies can’t hear or understand you, they must succeed at a Perception check against the creature’s Stealth DC or they misunderstand the distance to the target and believe it to be in a different location.
 </string>
+
     <string name="title_raise_a_shield">Raise a shield - 1 action</string>
+    <string name="requirement_raise_a_shield">You are wielding a shield.</string>
     <string name="text_raise_a_shield">
-Requirements You are wielding a shield.\n You position your shield to protect yourself. When you have Raised a Shield, you gain its listed bonuses to AC and TAC as circumstance bonuses and you can use the Shield Block reaction. Your shield remains raised until the start of your next turn.
+You position your shield to protect yourself. When you have Raised a Shield, you gain its listed bonuses to AC and TAC as circumstance bonuses and you can use the Shield Block reaction. Your shield remains raised until the start of your next turn.
 </string>
+
     <string name="title_shield_block">Shield block - reaction</string>
+    <string name="trigger_shield_block">While you have your shield raised, you take damage from a physical attack.</string>
     <string name="text_shield_block">
-Trigger While you have your shield raised, you take damage from a physical attack.\n You snap your shield into place to deflect a blow. Your shield prevents you from taking an amount of damage up to its Hardness— the shield takes this damage instead, possibly becoming dented or broken. See page 175 for rules on dented and broken items.
+You snap your shield into place to deflect a blow. Your shield prevents you from taking an amount of damage up to its Hardness— the shield takes this damage instead, possibly becoming dented or broken. See page 175 for rules on dented and broken items.
 </string>
 </resources>
