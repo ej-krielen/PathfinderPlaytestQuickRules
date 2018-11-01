@@ -12,18 +12,9 @@
     android:paddingBottom="@dimen/small_padding">
 
     <TextView
-        android:id="@+id/bordered_layout_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/small_padding"
-        android:paddingRight="@dimen/small_padding"
-        android:textStyle="bold" />
-
-    <TextView
         android:id="@+id/bordered_layout_text"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:paddingLeft="@dimen/small_padding"
         android:paddingRight="@dimen/small_padding" />
 </LinearLayout>

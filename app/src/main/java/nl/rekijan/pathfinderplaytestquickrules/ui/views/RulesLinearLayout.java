@@ -46,6 +46,14 @@ public class RulesLinearLayout extends LinearLayout {
             addRequirement(rulesModel.getRequirement());
         if (!TextUtils.isEmpty(rulesModel.getText()))
             addText(rulesModel.getText());
+        if (!TextUtils.isEmpty(rulesModel.getSuccess()))
+            addSuccess(rulesModel.getSuccess());
+        if (!TextUtils.isEmpty(rulesModel.getCriticalSuccess()))
+            addCriticalSuccess(rulesModel.getCriticalSuccess());
+        if (!TextUtils.isEmpty(rulesModel.getFailure()))
+            addFailure(rulesModel.getFailure());
+        if (!TextUtils.isEmpty(rulesModel.getCriticalFailure()))
+            addCriticalFailure(rulesModel.getCriticalFailure());
         if (rulesModel.getNotes() != null && rulesModel.getNotes().size() > 0)
             addNotes(rulesModel.getNotes());
     }
@@ -67,15 +75,13 @@ public class RulesLinearLayout extends LinearLayout {
 
     private void addRequirement(String requirement) {
         BorderedLinearLayout requirementLayout = new BorderedLinearLayout(mContext);
-        requirementLayout.setTitle(mContext.getString(R.string.requirement_title));
-        requirementLayout.setText(requirement);
+        requirementLayout.setText(mContext.getString(R.string.requirement_title) + " " + requirement);
         this.addView(requirementLayout);
     }
 
     private void addTrigger(String trigger) {
         BorderedLinearLayout triggerLayout = new BorderedLinearLayout(mContext);
-        triggerLayout.setTitle(mContext.getString(R.string.trigger_title));
-        triggerLayout.setText(trigger);
+        triggerLayout.setText(mContext.getString(R.string.trigger_title) + " " + trigger);
         this.addView(triggerLayout);
     }
 
@@ -99,6 +105,30 @@ public class RulesLinearLayout extends LinearLayout {
         TextLinearLayout answerLayout = new TextLinearLayout(mContext);
         answerLayout.setText(text);
         this.addView(answerLayout);
+    }
+
+    private void addSuccess(String success) {
+        BorderedLinearLayout requirementLayout = new BorderedLinearLayout(mContext);
+        requirementLayout.setText(mContext.getString(R.string.success_title) + " " + success);
+        this.addView(requirementLayout);
+    }
+
+    private void addCriticalSuccess(String criticalSuccess) {
+        BorderedLinearLayout requirementLayout = new BorderedLinearLayout(mContext);
+        requirementLayout.setText(mContext.getString(R.string.critical_success_title) + " " + criticalSuccess);
+        this.addView(requirementLayout);
+    }
+
+    private void addFailure(String failure) {
+        BorderedLinearLayout requirementLayout = new BorderedLinearLayout(mContext);
+        requirementLayout.setText(mContext.getString(R.string.failure_title) + " " + failure);
+        this.addView(requirementLayout);
+    }
+
+    private void addCriticalFailure(String criticalFailure) {
+        BorderedLinearLayout requirementLayout = new BorderedLinearLayout(mContext);
+        requirementLayout.setText(mContext.getString(R.string.critical_failure_title) + " " + criticalFailure);
+        this.addView(requirementLayout);
     }
 
     private void addNotes(List<NoteModel> notes) {

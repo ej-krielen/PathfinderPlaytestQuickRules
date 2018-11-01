@@ -14,6 +14,7 @@ import nl.rekijan.pathfinderplaytestquickrules.contentloaders.BasicActionsConten
 import nl.rekijan.pathfinderplaytestquickrules.contentloaders.ConditionRulesContentLoader;
 import nl.rekijan.pathfinderplaytestquickrules.contentloaders.ConditionsContentLoader;
 import nl.rekijan.pathfinderplaytestquickrules.contentloaders.EncounterModeContentLoader;
+import nl.rekijan.pathfinderplaytestquickrules.contentloaders.SkillActionsContentLoader;
 import nl.rekijan.pathfinderplaytestquickrules.contentloaders.SpecialActionsContentLoader;
 import nl.rekijan.pathfinderplaytestquickrules.models.NavItemModel;
 
@@ -81,6 +82,12 @@ public class AppExtension extends Application {
         if (sharedPref.getBoolean("pref_show_special_actions", true)) {
             mListDataHeader.add(getString(R.string.navigation_category_special_actions));
             mListDataChild.put(getString(R.string.navigation_category_special_actions), SpecialActionsContentLoader.getInstance().getSpecialActionsContent(this, sharedPref));
+        }
+
+        //Skill Actions
+        if (sharedPref.getBoolean("pref_show_skill_actions", true)) {
+            mListDataHeader.add(getString(R.string.navigation_category_skill_actions));
+            mListDataChild.put(getString(R.string.navigation_category_skill_actions), SkillActionsContentLoader.getInstance().getSkillActionsContent(this, sharedPref));
         }
 
         //Affliction Rules

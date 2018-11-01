@@ -38,6 +38,11 @@ Oops, looks like you discovered a bug. \n\nE-mail me at info\@rekijan.nl and men
     <string name="notes_title">Notes</string>
     <string name="requirement_title">Requirement:</string>
     <string name="trigger_title">Trigger:</string>
+    <string name="traits_title">Traits:</string>
+    <string name="success_title">Success:</string>
+    <string name="critical_success_title">Critical Success:</string>
+    <string name="failure_title">Failure:</string>
+    <string name="critical_failure_title">Critical Failure:</string>
 
     <!--  General answers -->
     <string name="answer_yes">Yes</string>
@@ -56,6 +61,24 @@ Oops, looks like you discovered a bug. \n\nE-mail me at info\@rekijan.nl and men
     <string name="navigation_category_basic_actions">Basic Actions</string>
     <string name="navigation_category_condition_rules">Condition Rules</string>
     <string name="navigation_category_special_actions">Speciality Basic Actions and Reactions</string>
+    <string name="navigation_category_skill_actions">Skill Actions</string>
+    <string name="navigation_category_acrobatics">Acrobatics</string>
+    <string name="navigation_category_arcana">Arcana</string>
+    <string name="navigation_category_athletics">Athletics</string>
+    <string name="navigation_category_crafting">Crafting</string>
+    <string name="navigation_category_deception">Deception</string>
+    <string name="navigation_category_diplomacy">Diplomacy</string>
+    <string name="navigation_category_intimidation">Intimidation</string>
+    <string name="navigation_category_lore">Lore</string>
+    <string name="navigation_category_medicine">Medicine</string>
+    <string name="navigation_category_nature">Nature</string>
+    <string name="navigation_category_occultism">Occultism</string>
+    <string name="navigation_category_performance">Performance</string>
+    <string name="navigation_category_religion">Religion</string>
+    <string name="navigation_category_society">Society</string>
+    <string name="navigation_category_stealth">Stealth</string>
+    <string name="navigation_category_survival">Survival</string>
+    <string name="navigation_category_thievery">Thievery</string>
     <string name="navigation_category_affliction_rules">Affliction Rules</string>
     <string name="navigation_category_encounter_mode">Encounter Mode</string>
 

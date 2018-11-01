@@ -39,8 +39,7 @@ public class MainActivity extends AppCompatActivity
     private DrawerLayout mDrawerLayout;
     private RelativeLayout mDrawerGroupedLayout;
     private ExpandableListView mNavItemListView;
-    private String mRulesTitle;
-    private String mRulesText;
+    private RulesModel mRulesModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +78,7 @@ public class MainActivity extends AppCompatActivity
                     .addToBackStack(START_FRAGMENT_TAG)
                     .commit();
         }
-        mRulesTitle = "no title found";
-        mRulesText = "no text found";
+        mRulesModel = null;
     }
 
     @Override
@@ -134,7 +132,7 @@ public class MainActivity extends AppCompatActivity
     private void shareContent() {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, mRulesTitle + "\n" + mRulesText);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, mRulesModel.getShareableString(this));
         sendIntent.setType("text/plain");
         startActivity(sendIntent);
     }
@@ -148,8 +146,7 @@ public class MainActivity extends AppCompatActivity
     public void onNavItemPressed(RulesModel rulesModel) {
         replaceFragment(RulesFragment.newInstance(rulesModel));
         if (mDrawerLayout != null) {
-            mRulesTitle = rulesModel.getTitle();
-            mRulesText = rulesModel.getText();
+            mRulesModel = rulesModel;
             if (mDrawerLayout.isDrawerOpen(mDrawerGroupedLayout)) {
                 mDrawerLayout.closeDrawer(mDrawerGroupedLayout);
             }

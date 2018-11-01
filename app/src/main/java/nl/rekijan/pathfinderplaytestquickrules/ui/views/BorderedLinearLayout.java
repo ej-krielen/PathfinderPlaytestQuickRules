@@ -20,11 +20,6 @@ public class BorderedLinearLayout extends LinearLayout {
         LayoutInflater.from(context).inflate(R.layout.bordered_layout, this, true);
     }
 
-    public void setTitle(String title) {
-        TextView tv = (TextView) findViewById(R.id.bordered_layout_title);
-        tv.setText(title);
-    }
-
     public void setText(String text) {
         TextView tv = (TextView) findViewById(R.id.bordered_layout_text);
         tv.setText(text);

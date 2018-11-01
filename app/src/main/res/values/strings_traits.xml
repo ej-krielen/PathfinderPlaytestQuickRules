@@ -24,6 +24,9 @@
     <string name="title_secret">Secret</string>
     <string name="text_secret">This trait indicates that the GM rolls the check for this ability in secret.</string>
 
+    <string name="title_trained_only">Trained Only</string>
+    <string name="text_trained_only">You have to be at least trained in the skill to perform this action.</string>
+
     <string name="title_visual">Visual</string>
     <string name="text_visual">A visual spell can affect only creatures that can see it.</string>
 

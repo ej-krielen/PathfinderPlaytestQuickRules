@@ -106,4 +106,164 @@
             <CheckBoxPreference android:defaultValue="true" android:key="pref_end_your_turn" android:title="@string/title_end_your_turn"/>
         </PreferenceScreen>
     </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_skill_actions">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_acrobatics">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_acrobatics" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_acrobatics" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_balance" android:title="@string/title_balance"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_escape" android:title="@string/title_escape"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_grab_edge" android:title="@string/title_grab_edge"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_maintain_balance" android:title="@string/title_maintain_balance"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_squeeze" android:title="@string/title_squeeze"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_tumble_through" android:title="@string/title_tumble_through"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_maneuver_in_flight" android:title="@string/title_maneuver_in_flight"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_arcana">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_arcana" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_arcana" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_recall_knowledge_arcana" android:title="@string/title_recall_knowledge_arcana"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_borrow_arcane_spell" android:title="@string/title_borrow_arcane_spell"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_identify_magic_arcana" android:title="@string/title_identify_magic_arcana"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_learn_arcane_spell" android:title="@string/title_learn_arcane_spell"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_read_magic" android:title="@string/title_read_magic"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_athletics">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_athletics" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_athletics" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_break_grapple" android:title="@string/title_break_grapple"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_break_open" android:title="@string/title_break_open"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_climb" android:title="@string/title_climb"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_grapple" android:title="@string/title_grapple"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_high_jump" android:title="@string/title_high_jump"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_long_jump" android:title="@string/title_long_jump"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_shove" android:title="@string/title_shove"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_swim" android:title="@string/title_swim"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_trip" android:title="@string/title_trip"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_disarm" android:title="@string/title_disarm"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_crafting">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_crafting" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_crafting" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_recall_knowledge_crafting" android:title="@string/title_recall_knowledge_crafting"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_repair" android:title="@string/title_repair"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_craft" android:title="@string/title_craft"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_identify_alchemy" android:title="@string/title_identify_alchemy"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_deception">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_deception" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_deception" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_create_diversion" android:title="@string/title_create_diversion"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_impersonate" android:title="@string/title_impersonate"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_lie" android:title="@string/title_lie"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_feint" android:title="@string/title_feint"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_diplomacy">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_diplomacy" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_diplomacy" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_gather_information" android:title="@string/title_gather_information"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_make_impression" android:title="@string/title_make_impression"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_request" android:title="@string/title_request"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_intimidation">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_intimidation" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_intimidation" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_coerce" android:title="@string/title_coerce"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_demoralize" android:title="@string/title_demoralize"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_lore">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_lore" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_lore" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_recall_knowledge_lore" android:title="@string/title_recall_knowledge_lore"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_practice_trade" android:title="@string/title_practice_trade"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_medicine">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_lore" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_medicine" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_administer_first_aid" android:title="@string/title_administer_first_aid"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_analyze_forensics" android:title="@string/title_analyze_forensics"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_treat_disease" android:title="@string/title_treat_disease"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_treat_poison" android:title="@string/title_treat_poison"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_treat_wounds" android:title="@string/title_treat_wounds"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_nature">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_nature" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_nature" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_command_animal" android:title="@string/title_command_animal"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_handle_animal" android:title="@string/title_handle_animal"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_recall_knowledge_nature" android:title="@string/title_recall_knowledge_nature"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_identify_magic_nature" android:title="@string/title_identify_magic_nature"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_learn_primal_spell" android:title="@string/title_learn_primal_spell"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_occultism">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_occultism" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_occultism" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_recall_knowledge_occultism" android:title="@string/title_recall_knowledge_occultism"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_identify_magic_occultism" android:title="@string/title_identify_magic_occultism"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_learn_occult_spell" android:title="@string/title_learn_occult_spell"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_read_esoterica" android:title="@string/title_read_esoterica"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_performance">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_performance" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_performance" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_perform" android:title="@string/title_perform"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_stage_performance" android:title="@string/title_stage_performance"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_religion">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_religion" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_religion" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_recall_knowledge_religion" android:title="@string/title_recall_knowledge_religion"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_identify_magic_religion" android:title="@string/title_identify_magic_religion"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_learn_divine_spell" android:title="@string/title_learn_divine_spell"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_read_sripture" android:title="@string/title_read_scripture"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_society">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_society" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_society" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_recall_knowledge_society" android:title="@string/title_recall_knowledge_society"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_subsist_streets" android:title="@string/title_subsist_streets"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_create_forgery" android:title="@string/title_create_forgery"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_decipher_writing" android:title="@string/title_decipher_writing"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_stealth">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_stealth" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_stealth" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_conceal_object" android:title="@string/title_conceal_object"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_hide" android:title="@string/title_hide"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_sneak" android:title="@string/title_sneak"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_survival">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_survival" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_survival" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_sense_direction" android:title="@string/title_sense_direction"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_survive_wild" android:title="@string/title_survive_wild"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_cover_tracks" android:title="@string/title_cover_tracks"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_track" android:title="@string/title_track"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/navigation_category_thievery">
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_thievery" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <PreferenceScreen android:key="button_show_skill_actions_thievery" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_palm_object" android:title="@string/title_palm_object"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_steal_object" android:title="@string/title_steal_object"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_disable_device" android:title="@string/title_disable_device"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_pick_lock" android:title="@string/title_pick_lock"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
 </PreferenceScreen>

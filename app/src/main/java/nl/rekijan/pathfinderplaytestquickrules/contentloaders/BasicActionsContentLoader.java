@@ -31,37 +31,39 @@ public class BasicActionsContentLoader {
     public List<NavItemModel> getBasicActionsContent(Context context, SharedPreferences sharedPref) {
         List<NavItemModel> basicActions = new ArrayList<>();
         if (sharedPref.getBoolean("pref_aid", true)) {
-            basicActions.add(new NavItemModel(context.getString(R.string.title_aid), new
-                    RulesModel(context.getString(R.string.title_aid), context.getString(R.string.text_aid))));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_aid), context.getString(R.string.text_aid));
+            rules.setTrigger(context.getString(R.string.trigger_aid));
+            rules.setRequirement(context.getString(R.string.requirement_aid));
+            basicActions.add(new NavItemModel(context.getString(R.string.title_aid), rules));
         }
         if (sharedPref.getBoolean("pref_assist", true)) {
-            RulesModel assistRules = new RulesModel(context.getString(R.string.title_assist), context.getString(R.string.text_assist));
-            assistRules.setRequirement(context.getString(R.string.requirement_assist));
-            assistRules.addTrait(context.getString(R.string.title_attack), context.getString(R.string.text_attack), context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_assist), assistRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_assist), context.getString(R.string.text_assist));
+            rules.setRequirement(context.getString(R.string.requirement_assist));
+            rules.addTrait(context.getString(R.string.title_attack), context.getString(R.string.text_attack), context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_assist), rules));
         }
         if (sharedPref.getBoolean("pref_crawl", true)) {
-            RulesModel crawlRules = new RulesModel(context.getString(R.string.title_crawl), context.getString(R.string.text_crawl));
-            crawlRules.setRequirement(context.getString(R.string.requirement_crawl));
-            crawlRules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move), context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_crawl), crawlRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_crawl), context.getString(R.string.text_crawl));
+            rules.setRequirement(context.getString(R.string.requirement_crawl));
+            rules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move), context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_crawl), rules));
         }
         if (sharedPref.getBoolean("pref_delay", true)) {
-            RulesModel delayRules = new RulesModel(context.getString(R.string.title_delay), context.getString(R.string.text_delay));
-            delayRules.setTrigger(context.getString(R.string.trigger_delay));
-            basicActions.add(new NavItemModel(context.getString(R.string.title_delay), delayRules ));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_delay), context.getString(R.string.text_delay));
+            rules.setTrigger(context.getString(R.string.trigger_delay));
+            basicActions.add(new NavItemModel(context.getString(R.string.title_delay), rules ));
         }
         if (sharedPref.getBoolean("pref_drop", true)) {
-            RulesModel dropRules = new RulesModel(context.getString(R.string.title_drop), context.getString(R.string.text_drop));
-            dropRules.setTrigger(context.getString(R.string.trigger_drop));
-            dropRules.addTrait(context.getString(R.string.title_manipulate), context.getString(R.string.text_manipulate), context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_drop), dropRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_drop), context.getString(R.string.text_drop));
+            rules.setTrigger(context.getString(R.string.trigger_drop));
+            rules.addTrait(context.getString(R.string.title_manipulate), context.getString(R.string.text_manipulate), context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_drop), rules));
         }
         if (sharedPref.getBoolean("pref_drop_prone", true)) {
-            RulesModel dropProneRules = new RulesModel(context.getString(R.string.title_drop_prone), context.getString(R.string.text_drop_prone));
-            dropProneRules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move),context);
-            dropProneRules.addNote(context.getString(R.string.title_prone), context.getString(R.string.text_prone), context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_drop_prone), dropProneRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_drop_prone), context.getString(R.string.text_drop_prone));
+            rules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move),context);
+            rules.addNote(context.getString(R.string.title_prone), context.getString(R.string.text_prone), context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_drop_prone), rules));
         }
         if (sharedPref.getBoolean("pref_interact", true)) {
             RulesModel interactRules = new RulesModel(context.getString(R.string.title_interact), context.getString(R.string.text_interact));
@@ -69,14 +71,14 @@ public class BasicActionsContentLoader {
             basicActions.add(new NavItemModel(context.getString(R.string.title_interact), interactRules));
         }
         if (sharedPref.getBoolean("pref_leap", true)) {
-            RulesModel leapRules = new RulesModel(context.getString(R.string.title_leap), context.getString(R.string.text_leap));
-            leapRules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move), context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_leap), leapRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_leap), context.getString(R.string.text_leap));
+            rules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move), context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_leap), rules));
         }
         if (sharedPref.getBoolean("pref_ready", true)) {
-            RulesModel readyRules = new RulesModel(context.getString(R.string.title_ready), context.getString(R.string.text_ready));
-            readyRules.addTrait(context.getString(R.string.title_concentrate), context.getString(R.string.text_concentrate), context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_ready), readyRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_ready), context.getString(R.string.text_ready));
+            rules.addTrait(context.getString(R.string.title_concentrate), context.getString(R.string.text_concentrate), context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_ready), rules));
         }
         if (sharedPref.getBoolean("pref_seek", true)) {
             RulesModel seekRules = new RulesModel(context.getString(R.string.title_seek), context.getString(R.string.text_seek));
@@ -85,30 +87,30 @@ public class BasicActionsContentLoader {
             basicActions.add(new NavItemModel(context.getString(R.string.title_seek), seekRules));
         }
         if (sharedPref.getBoolean("pref_stand", true)) {
-            RulesModel standRules = new RulesModel(context.getString(R.string.title_stand), context.getString(R.string.text_stand));
-            standRules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move), context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_stand), standRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_stand), context.getString(R.string.text_stand));
+            rules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move), context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_stand), rules));
         }
         if (sharedPref.getBoolean("pref_step", true)) {
-            RulesModel stepRules = new RulesModel(context.getString(R.string.title_step), context.getString(R.string.text_step));
-            stepRules.setRequirement(context.getString(R.string.requirement_step));
-            stepRules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move),context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_step), stepRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_step), context.getString(R.string.text_step));
+            rules.setRequirement(context.getString(R.string.requirement_step));
+            rules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move),context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_step), rules));
         }
         if (sharedPref.getBoolean("pref_stride", true)) {
-            RulesModel strideRules = new RulesModel(context.getString(R.string.title_stride), context.getString(R.string.text_stride));
-            strideRules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move), context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_stride), strideRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_stride), context.getString(R.string.text_stride));
+            rules.addTrait(context.getString(R.string.title_move), context.getString(R.string.text_move), context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_stride), rules));
         }
         if (sharedPref.getBoolean("pref_strike", true)) {
-            RulesModel strikeRules = new RulesModel(context.getString(R.string.title_strike), context.getString(R.string.text_strike));
-            strikeRules.addTrait(context.getString(R.string.title_attack), context.getString(R.string.text_attack), context);
-            basicActions.add(new NavItemModel(context.getString(R.string.title_strike), strikeRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_strike), context.getString(R.string.text_strike));
+            rules.addTrait(context.getString(R.string.title_attack), context.getString(R.string.text_attack), context);
+            basicActions.add(new NavItemModel(context.getString(R.string.title_strike), rules));
         }
         if (sharedPref.getBoolean("pref_take_cover", true)) {
-            RulesModel takeCoverRules = new RulesModel(context.getString(R.string.title_take_cover), context.getString(R.string.text_take_cover));
-            takeCoverRules.setRequirement(context.getString(R.string.requirement_take_cover));
-            basicActions.add(new NavItemModel(context.getString(R.string.title_take_cover), takeCoverRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_take_cover), context.getString(R.string.text_take_cover));
+            rules.setRequirement(context.getString(R.string.requirement_take_cover));
+            basicActions.add(new NavItemModel(context.getString(R.string.title_take_cover), rules));
         }
         return basicActions;
     }

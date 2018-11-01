@@ -3,10 +3,12 @@ package nl.rekijan.pathfinderplaytestquickrules.models;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.text.TextUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import nl.rekijan.pathfinderplaytestquickrules.R;
 import nl.rekijan.pathfinderplaytestquickrules.utilities.NavigationHandler;
 
 /**
@@ -24,6 +26,10 @@ public class RulesModel implements Parcelable {
     private List<NoteModel> notes;
     private List<TraitModel> traits;
     private String errorMessage;
+    private String success;
+    private String criticalSuccess;
+    private String failure;
+    private String criticalFailure;
 
     public RulesModel (String title, String text){
         this.title = title;
@@ -122,5 +128,74 @@ public class RulesModel implements Parcelable {
 
     public void setTrigger(String trigger) {
         this.trigger = trigger;
+    }
+
+    public String getSuccess() {
+        return success;
+    }
+
+    public void setSuccess(String success) {
+        this.success = success;
+    }
+
+    public String getCriticalSuccess() {
+        return criticalSuccess;
+    }
+
+    public void setCriticalSuccess(String criticalSuccess) {
+        this.criticalSuccess = criticalSuccess;
+    }
+
+    public String getFailure() {
+        return failure;
+    }
+
+    public void setFailure(String failure) {
+        this.failure = failure;
+    }
+
+    public String getCriticalFailure() {
+        return criticalFailure;
+    }
+
+    public void setCriticalFailure(String criticalFailure) {
+        this.criticalFailure = criticalFailure;
+    }
+
+    public String getShareableString(Context context)
+    {
+        String output = "";
+        if (!TextUtils.isEmpty(title)){
+            output += title + "\n";
+        }
+        if (traits != null && traits.size() > 0)
+        {
+            output += context.getString(R.string.traits_title) + " ";
+            for (TraitModel t : traits) {
+                output += t.getText() + " ";
+            }
+        }
+        if (!TextUtils.isEmpty(trigger)){
+            output += context.getString(R.string.trigger_title) + " " + trigger + "\n";
+        }
+        if (!TextUtils.isEmpty(requirement)){
+            output += context.getString(R.string.requirement_title) + " " + requirement + "\n";
+        }
+        if (!TextUtils.isEmpty(text)){
+            output += text + "\n";
+        }
+        if (!TextUtils.isEmpty(success)){
+            output += context.getString(R.string.success_title) + " " + success + "\n";
+        }
+        if (!TextUtils.isEmpty(criticalSuccess)){
+            output += context.getString(R.string.critical_success_title) + " " + criticalSuccess + "\n";
+        }
+        if (!TextUtils.isEmpty(failure)){
+            output += context.getString(R.string.failure_title) + " " + failure + "\n";
+        }
+        if (!TextUtils.isEmpty(criticalFailure)){
+            output += context.getString(R.string.critical_failure_title) + " " + criticalFailure + "\n";
+        }
+        return output;
     }
 }

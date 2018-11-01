@@ -35,13 +35,13 @@ public class EncounterModeContentLoader {
                     RulesModel(context.getString(R.string.title_initiative), context.getString(R.string.text_initiative))));
         }
         if (sharedPref.getBoolean("pref_pref_start_your_turn", true)) {
-            RulesModel startRules = new RulesModel(context.getString(R.string.title_start_your_turn), context.getString(R.string.text_start_your_turn));
-            startRules.addNote(context.getString(R.string.title_dying), context.getString(R.string.text_dying), context);
-            encounterMode.add(new NavItemModel(context.getString(R.string.title_start_your_turn), startRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_start_your_turn), context.getString(R.string.text_start_your_turn));
+            rules.addNote(context.getString(R.string.title_dying), context.getString(R.string.text_dying), context);
+            encounterMode.add(new NavItemModel(context.getString(R.string.title_start_your_turn), rules));
         }
         if (sharedPref.getBoolean("pref_pref_end_your_turn", true)) {
-            RulesModel endRules = new RulesModel(context.getString(R.string.title_end_your_turn), context.getString(R.string.text_end_your_turn));
-            encounterMode.add(new NavItemModel(context.getString(R.string.title_end_your_turn), endRules));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_end_your_turn), context.getString(R.string.text_end_your_turn));
+            encounterMode.add(new NavItemModel(context.getString(R.string.title_end_your_turn), rules));
             //TODO add concentrate on spell note
         }
         return encounterMode;
