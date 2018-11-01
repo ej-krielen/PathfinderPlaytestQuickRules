@@ -134,8 +134,8 @@ public class SkillActionsContentLoader {
                 RulesModel rules = new RulesModel(context.getString(R.string.title_identify_magic_arcana), context.getString(R.string.text_identify_magic_arcana));
                 rules.addTrait(context.getString(R.string.title_arcana), context.getString(R.string.text_arcana), context);
                 rules.addTrait(context.getString(R.string.title_trained_only), context.getString(R.string.text_trained_only), context);
-                rules.addTrait(context.getString(R.string.title_secret), context.getString(R.string.text_secret), context);
                 rules.addTrait(context.getString(R.string.title_concentrate), context.getString(R.string.text_concentrate), context);
+                rules.addTrait(context.getString(R.string.title_secret), context.getString(R.string.text_secret), context);
                 rules.setSuccess(context.getString(R.string.success_balance));
                 rules.setCriticalSuccess(context.getString(R.string.critical_success_identify_magic_arcana));
                 rules.setFailure(context.getString(R.string.failure_identify_magic_arcana));

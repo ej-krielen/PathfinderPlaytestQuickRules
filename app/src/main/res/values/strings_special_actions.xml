@@ -25,7 +25,7 @@ You move through the air up to your fly Speed. Moving upward (straight up or dia
 
     <string name="title_mount">Mount - 1 action</string>
     <string name="requirement_mount">You are adjacent to an allied animal companion or to a creature at least one size larger than you that you’ve controlled using the Handle an Animal action</string>
-    <string name="text_mount">ou move onto the controlled creature and ride it. If you’re already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it.
+    <string name="text_mount">You move onto the controlled creature and ride it. If you’re already mounted, you can instead use this action to dismount, moving off the mount into a space adjacent to it.
 </string>
 
     <string name="title_point_out">Point Out - 1 action</string>

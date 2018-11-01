@@ -174,6 +174,7 @@ public class RulesModel implements Parcelable {
             for (TraitModel t : traits) {
                 output += t.getText() + " ";
             }
+            output += "\n";
         }
         if (!TextUtils.isEmpty(trigger)){
             output += context.getString(R.string.trigger_title) + " " + trigger + "\n";
