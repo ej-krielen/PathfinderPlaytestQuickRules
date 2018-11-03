@@ -54,6 +54,10 @@ Oops, looks like you discovered a bug. \n\nE-mail me at info\@rekijan.nl and men
     <!--  General notes -->
     <string name="note_standard_action">Doing this normally takes a standard action</string>
     <string name="note_free_action">Doing this normally takes a free action</string>
+    <string name="title_flat_check">Flat Check</string>
+    <string name="text_flat_check">When there’s a chance something will happen or fail to happen based on pure chance, you attempt a flat check. A flat check never includes any modifiers, bonuses, or penalties—you just roll the d20 and compare the result on the die to the DC. Specific effects might adjust your DC for certain types of flat checks, but abilities that don’t specifically call out flat checks can’t change their DCs.\n
+        If more than one flat check would ever cause or prevent the same thing, just roll once using the highest DC. In the rare circumstance that a flat check has a DC of 1 or lower, skip rolling; you automatically succeed. Conversely, if one ever has a DC of 21 or higher, you automatically fail.
+    </string>
 
 
     <!-- Categories-->

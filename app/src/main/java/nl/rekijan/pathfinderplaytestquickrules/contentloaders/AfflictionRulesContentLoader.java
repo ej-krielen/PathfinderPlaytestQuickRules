@@ -47,8 +47,9 @@ public class AfflictionRulesContentLoader {
                     RulesModel(context.getString(R.string.title_stages), context.getString(R.string.text_stages))));
         }
         if (sharedPref.getBoolean("pref_conditions_from_afflictions", true)) {
-            afflictionRules.add(new NavItemModel(context.getString(R.string.title_conditions_from_afflictions), new
-                    RulesModel(context.getString(R.string.title_conditions_from_afflictions), context.getString(R.string.text_conditions_from_afflictions))));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_conditions_from_afflictions), context.getString(R.string.text_conditions_from_afflictions));
+            rules.addNote(context.getString(R.string.title_flat_check), context.getString(R.string.text_flat_check), context);
+            afflictionRules.add(new NavItemModel(context.getString(R.string.title_conditions_from_afflictions), rules));
         }
         if (sharedPref.getBoolean("pref_multiple_exposures", true)) {
             afflictionRules.add(new NavItemModel(context.getString(R.string.title_multiple_exposures), new

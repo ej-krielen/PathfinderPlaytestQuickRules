@@ -54,8 +54,9 @@ public class ConditionsContentLoader {
                     RulesModel(context.getString(R.string.title_broken), context.getString(R.string.text_broken))));
         }
         if (sharedPref.getBoolean("pref_concealed", true)) {
-            conditions.add(new NavItemModel(context.getString(R.string.title_concealed), new
-                    RulesModel(context.getString(R.string.title_concealed), context.getString(R.string.text_concealed))));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_concealed), context.getString(R.string.text_concealed));
+            rules.addNote(context.getString(R.string.title_flat_check), context.getString(R.string.text_flat_check), context);
+            conditions.add(new NavItemModel(context.getString(R.string.title_concealed), rules));
         }
         if (sharedPref.getBoolean("pref_confused", true)) {
             conditions.add(new NavItemModel(context.getString(R.string.title_confused), new
@@ -101,6 +102,7 @@ public class ConditionsContentLoader {
         if (sharedPref.getBoolean("pref_entangled", true)) {
             RulesModel rules = new RulesModel(context.getString(R.string.title_entangled), context.getString(R.string.text_entangled));
             rules.addNote(context.getString(R.string.title_hampered), context.getString(R.string.text_hampered), context);
+            rules.addNote(context.getString(R.string.title_flat_check), context.getString(R.string.text_flat_check), context);
             conditions.add(new NavItemModel(context.getString(R.string.title_entangled), rules));
         }
         if (sharedPref.getBoolean("pref_fascinated", true)) {
@@ -126,6 +128,7 @@ public class ConditionsContentLoader {
             RulesModel rules = new RulesModel(context.getString(R.string.title_grabbed), context.getString(R.string.text_grabbed));
             rules.addNote(context.getString(R.string.title_immobile), context.getString(R.string.text_immobile), context);
             rules.addNote(context.getString(R.string.title_flatfooted), context.getString(R.string.text_flatfooted), context);
+            rules.addNote(context.getString(R.string.title_flat_check), context.getString(R.string.text_flat_check), context);
             conditions.add(new NavItemModel(context.getString(R.string.title_grabbed), rules));
         }
         if (sharedPref.getBoolean("pref_hampered", true)) {
@@ -144,8 +147,9 @@ public class ConditionsContentLoader {
             //TODO add recall knowledge note
         }
         if (sharedPref.getBoolean("pref_persistent_damage", true)) {
-            conditions.add(new NavItemModel(context.getString(R.string.title_persistent_damage), new
-                    RulesModel(context.getString(R.string.title_persistent_damage), context.getString(R.string.text_persistent_damage))));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_persistent_damage), context.getString(R.string.text_persistent_damage));
+            rules.addNote(context.getString(R.string.title_flat_check), context.getString(R.string.text_flat_check), context);
+            conditions.add(new NavItemModel(context.getString(R.string.title_persistent_damage), rules));
             //TODO check for needed notes later
         }
         if (sharedPref.getBoolean("pref_petrified", true)) {
@@ -179,6 +183,7 @@ public class ConditionsContentLoader {
             rules.addNote(context.getString(R.string.title_seek), context.getString(R.string.text_seek), context);
             rules.addNote(context.getString(R.string.title_flatfooted), context.getString(R.string.text_flatfooted), context);
             rules.addNote(context.getString(R.string.title_strike), context.getString(R.string.text_strike), context);
+            rules.addNote(context.getString(R.string.title_flat_check), context.getString(R.string.text_flat_check), context);
             conditions.add(new NavItemModel(context.getString(R.string.title_sensed), rules));
             //TODO add detecting creature, unseen,
         }
