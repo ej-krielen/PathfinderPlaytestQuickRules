@@ -39,6 +39,8 @@ public class ConditionsContentLoader {
             RulesModel rules = new RulesModel(context.getString(R.string.title_asleep), context.getString(R.string.text_asleep));
             rules.addNote(context.getString(R.string.title_blinded), context.getString(R.string.text_blinded), context);
             rules.addNote(context.getString(R.string.title_flatfooted), context.getString(R.string.text_flatfooted) , context);
+            rules.addNote(context.getString(R.string.title_prone), context.getString(R.string.text_prone) , context);
+            rules.addNote(context.getString(R.string.title_interact), context.getString(R.string.text_interact) , context);
             conditions.add(new NavItemModel(context.getString(R.string.title_asleep), rules));
         }
         if (sharedPref.getBoolean("pref_blinded", true)) {
@@ -106,8 +108,16 @@ public class ConditionsContentLoader {
             conditions.add(new NavItemModel(context.getString(R.string.title_entangled), rules));
         }
         if (sharedPref.getBoolean("pref_fascinated", true)) {
-            conditions.add(new NavItemModel(context.getString(R.string.title_fascinated), new
-                    RulesModel(context.getString(R.string.title_fascinated), context.getString(R.string.text_fascinated))));
+            RulesModel rules = new RulesModel(context.getString(R.string.title_fascinated), context.getString(R.string.text_fascinated));
+            rules.addNote(context.getString(R.string.title_seek), context.getString(R.string.text_seek) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_arcana), context.getString(R.string.text_recall_knowledge_arcana) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_crafting), context.getString(R.string.text_recall_knowledge_crafting) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_lore), context.getString(R.string.text_recall_knowledge_lore) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_nature), context.getString(R.string.text_recall_knowledge_nature) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_occultism), context.getString(R.string.text_recall_knowledge_occultism) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_religion), context.getString(R.string.text_recall_knowledge_religion) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_society), context.getString(R.string.text_recall_knowledge_society) , context);
+            conditions.add(new NavItemModel(context.getString(R.string.title_fascinated), rules));
             //TODO add note for hostile actions
         }
         if (sharedPref.getBoolean("pref_fatigued", true)) {
@@ -143,8 +153,14 @@ public class ConditionsContentLoader {
         if (sharedPref.getBoolean("pref_paralyzed", true)) {
             RulesModel rules = new RulesModel(context.getString(R.string.title_paralyzed), context.getString(R.string.text_paralyzed));
             rules.addNote(context.getString(R.string.title_flatfooted), context.getString(R.string.text_flatfooted), context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_arcana), context.getString(R.string.text_recall_knowledge_arcana) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_crafting), context.getString(R.string.text_recall_knowledge_crafting) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_lore), context.getString(R.string.text_recall_knowledge_lore) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_nature), context.getString(R.string.text_recall_knowledge_nature) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_occultism), context.getString(R.string.text_recall_knowledge_occultism) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_religion), context.getString(R.string.text_recall_knowledge_religion) , context);
+            rules.addNote(context.getString(R.string.title_recall_knowledge_society), context.getString(R.string.text_recall_knowledge_society) , context);
             conditions.add(new NavItemModel(context.getString(R.string.title_paralyzed), rules));
-            //TODO add recall knowledge note
         }
         if (sharedPref.getBoolean("pref_persistent_damage", true)) {
             RulesModel rules = new RulesModel(context.getString(R.string.title_persistent_damage), context.getString(R.string.text_persistent_damage));
@@ -175,6 +191,8 @@ public class ConditionsContentLoader {
             RulesModel rules = new RulesModel(context.getString(R.string.title_restrained), context.getString(R.string.text_restrained));
             rules.addNote(context.getString(R.string.title_immobile), context.getString(R.string.text_immobile), context);
             rules.addNote(context.getString(R.string.title_flatfooted), context.getString(R.string.text_flatfooted), context);
+            rules.addNote(context.getString(R.string.title_break_grapple), context.getString(R.string.text_break_grapple), context);
+            rules.addNote(context.getString(R.string.title_escape), context.getString(R.string.text_escape), context);
             conditions.add(new NavItemModel(context.getString(R.string.title_restrained), rules));
             //TODO add break grapple and escape skill actions
         }

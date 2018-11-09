@@ -187,7 +187,7 @@
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/navigation_category_medicine">
-        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_lore" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
+        <SwitchPreference android:defaultValue="true" android:key="pref_show_skill_actions_medicine" android:summaryOff="@string/pref_category_summary_disabled" android:summaryOn="@string/pref_category_summary_enabled" android:title="@string/pref_category_title"/>
         <PreferenceScreen android:key="button_show_skill_actions_medicine" android:persistent="false" android:summary="@string/pref_sub_item_summary" android:title="@string/pref_sub_item_title">
             <CheckBoxPreference android:defaultValue="true" android:key="pref_administer_first_aid" android:title="@string/title_administer_first_aid"/>
             <CheckBoxPreference android:defaultValue="true" android:key="pref_analyze_forensics" android:title="@string/title_analyze_forensics"/>
@@ -228,7 +228,7 @@
             <CheckBoxPreference android:defaultValue="true" android:key="pref_recall_knowledge_religion" android:title="@string/title_recall_knowledge_religion"/>
             <CheckBoxPreference android:defaultValue="true" android:key="pref_identify_magic_religion" android:title="@string/title_identify_magic_religion"/>
             <CheckBoxPreference android:defaultValue="true" android:key="pref_learn_divine_spell" android:title="@string/title_learn_divine_spell"/>
-            <CheckBoxPreference android:defaultValue="true" android:key="pref_read_sripture" android:title="@string/title_read_scripture"/>
+            <CheckBoxPreference android:defaultValue="true" android:key="pref_read_scripture" android:title="@string/title_read_scripture"/>
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/navigation_category_society">
