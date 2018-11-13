@@ -75,7 +75,7 @@ public class SkillActionsContentLoader {
                 rules.setTrigger(context.getString(R.string.trigger_maintain_balance));
                 rules.setSuccess(context.getString(R.string.success_maintain_balance));
                 rules.setCriticalSuccess(context.getString(R.string.critical_success_maintain_balance));
-                skillActions.add(new NavItemModel(context.getString(R.string.title_aid), rules));
+                skillActions.add(new NavItemModel(context.getString(R.string.title_maintain_balance), rules));
             }
             if (sharedPref.getBoolean("pref_squeeze", true)) {
                 RulesModel rules = new RulesModel(context.getString(R.string.title_squeeze), context.getString(R.string.text_squeeze));

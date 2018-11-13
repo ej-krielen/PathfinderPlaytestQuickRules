@@ -1,6 +1,9 @@
 package nl.rekijan.pathfinderplaytestquickrules;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
@@ -15,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import nl.rekijan.pathfinderplaytestquickrules.models.RulesModel;
 import nl.rekijan.pathfinderplaytestquickrules.ui.activities.SettingsActivity;
@@ -117,9 +121,34 @@ public class MainActivity extends AppCompatActivity
             return true;
         } else if (id == R.id.action_share) {
             shareContent();
+        } else if (id == R.id.action_about) {
+            aboutInfo();
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Show dialog explaining more info is available on the website
+     */
+    public void aboutInfo() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(getString(R.string.dialog_about_info))
+                .setTitle(getString(R.string.dialog_about_info_title));
+        builder.setPositiveButton(getString(R.string.dialog_about_ok), new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                Intent siteIntent =
+                        new Intent("android.intent.action.VIEW",
+                                Uri.parse("http://www.rekijan.nl/"));
+                startActivity(siteIntent);
+            }
+        });
+        builder.setNegativeButton(getString(R.string.dialog_cancel), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {}
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     private void replaceFragment(Fragment newFragment) {
@@ -130,11 +159,15 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void shareContent() {
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, mRulesModel.getShareableString(this));
-        sendIntent.setType("text/plain");
-        startActivity(sendIntent);
+        if (mRulesModel != null) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, mRulesModel.getShareableString(this));
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
+        } else {
+            Toast.makeText(this, getString(R.string.error_no_rules_model), Toast.LENGTH_LONG).show();
+        }
     }
 
     /**
@@ -145,8 +178,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onNavItemPressed(RulesModel rulesModel) {
         replaceFragment(RulesFragment.newInstance(rulesModel));
+        mRulesModel = rulesModel;
         if (mDrawerLayout != null) {
-            mRulesModel = rulesModel;
             if (mDrawerLayout.isDrawerOpen(mDrawerGroupedLayout)) {
                 mDrawerLayout.closeDrawer(mDrawerGroupedLayout);
             }
